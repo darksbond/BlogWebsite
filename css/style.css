@@ -1,0 +1,29 @@
+body {
+  background-color: #eeeaea;
+}
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.left-bar {
+  height: 100vh;
+  background-color: rgb(196, 192, 192);
+  position: sticky;
+  top: 0;
+  
+}
+.right-bar {
+  
+  height: 100vh;
+  background-color: rgb(221, 223, 226);
+  position: sticky;
+  top: 0;
+  
+}
+.left-button {
+  text-decoration: none;
+  color: darkslateblue;
+  display: block;
+}
