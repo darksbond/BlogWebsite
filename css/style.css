@@ -1,29 +1,22 @@
-body {
-  background-color: #eeeaea;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.nav-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
 .left-bar {
-  height: 100vh;
-  background-color: rgb(196, 192, 192);
+  height: 85vh;
+  margin-top: 1%;
+  overflow-y: scroll;
   position: sticky;
   top: 0;
-  
 }
 .right-bar {
-  
-  height: 100vh;
-  background-color: rgb(221, 223, 226);
+  height: 85vh;
+  margin-top: 1%;
   position: sticky;
   top: 0;
-  
 }
-.left-button {
+a{
   text-decoration: none;
-  color: darkslateblue;
-  display: block;
+  color: rgb(117, 117, 117);
 }
