@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BlogX Website</title>
+  </head>
+  <body>
+    <!-- ! ------ Nav Section ------- -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">BlogX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Docs</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <p class="d-md-none">
+            <button
+              class="btn btn-dark"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <!-- ! main Section --------- -->
+    <section class="main-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 d-none d-md-block left-bar">
+            <div class="d-flex align-items-start">
+              <div
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active text-secondary"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  Documents
+                </button>
+                <button
+                  class="nav-link text-secondary"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  Profile
+                </button>
+                <button
+                  class="nav-link text-secondary"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  Messages
+                </button>
+                <button
+                  class="nav-link text-secondary"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  Settings
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ! mobile view button -->
+
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <div class="d-flex align-items-start">
+                <div
+                  class="nav flex-column nav-pills me-3"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    class="nav-link active text-secondary"
+                    id="v-pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-home"
+                    aria-selected="true"
+                  >
+                    Documents
+                  </button>
+                  <button
+                    class="nav-link text-secondary hover-light"
+                    id="v-pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profile"
+                    aria-selected="false"
+                  >
+                    Profile
+                  </button>
+                  <button
+                    class="nav-link text-secondary"
+                    id="v-pills-messages-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-messages"
+                    aria-selected="false"
+                  >
+                    Messages
+                  </button>
+                  <button
+                    class="nav-link text-secondary"
+                    id="v-pills-settings-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-settings"
+                    aria-selected="false"
+                  >
+                    Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ! end of the mobile view nav - -->
+          <!-- ! main content Area --------- -->
+          <div
+            class="col-md-9 col-12 align-items-center justify-content-center right-bar"
+          >
+            <div class="row">
+              <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="v-pills-home"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-home-tab"
+                  >
+                    <h1>Creative Writing</h1>
+                    Generating random paragraphs can be an excellent way for
+                    writers to get their creative flow going at the beginning of
+                    the day. The writer has no idea what topic the random
+                    paragraph will be about when it appears. This forces the
+                    writer to use creativity to complete one of three common
+                    writing challenges. The writer can use the paragraph as the
+                    first one of a short story and build upon it. A second
+                    option is to use the random paragraph somewhere in a short
+                    story they create. The third option is to have the random
+                    paragraph be the ending paragraph in a short story. No
+                    matter which of these challenges is undertaken, the writer
+                    is forced to use creativity to incorporate the paragraph
+                    into their writing.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="v-pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-profile-tab"
+                  >
+                    <h1>Tackle Writers' Block</h1>
+                    A random paragraph can also be an excellent way for a writer
+                    to tackle writers' block. Writing block can often happen due
+                    to being stuck with a current project that the writer is
+                    trying to complete. By inserting a completely random
+                    paragraph from which to begin, it can take down some of the
+                    issues that may have been causing the writers' block in the
+                    first place.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="v-pills-messages"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-messages-tab"
+                  >
+                    <h1>Programmers</h1>
+                    It's not only writers who can benefit from this free online
+                    tool. If you're a programmer who's working on a project
+                    where blocks of text are needed, this tool can be a great
+                    way to get that. It's a good way to test your programming
+                    and that the tool being created is working well. Above are a
+                    few examples of how the random paragraph generator can be
+                    beneficial. The best way to see if this random paragraph
+                    picker will be useful for your intended purposes is to give
+                    it a try. Generate a number of paragraphs to see if they are
+                    beneficial to your current project. If you do find this
+                    paragraph tool useful, please do us a favor and let us know
+                    how you're using it. It's greatly beneficial for us to know
+                    the different ways this tool is being used so we can improve
+                    it with updates. This is especially true since there are
+                    times when the generators we create get used in completely
+                    unanticipated ways from when we initially created them. If
+                    you have the time, please send us a quick note on what you'd
+                    like to see changed or added to make it better in the
+                    future.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="v-pills-settings"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-settings-tab"
+                  >
+                    <h1>Beginning Writing Routine</h1>
+                    Another productive way to use this tool to begin a daily
+                    writing routine. One way is to generate a random paragraph
+                    with the intention to try to rewrite it while still keeping
+                    the original meaning. The purpose here is to just get the
+                    writing started so that when the writer goes onto their
+                    day's writing projects, words are already flowing from their
+                    fingers.
+                  </div>
+                </div>
+              </div>
+              <!-- ! Right Bar Section ----- -->
+              <div class="col-3 d-none d-md-block">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
