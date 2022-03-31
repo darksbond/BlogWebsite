@@ -3,16 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #e8eaed;
+}
 .left-bar {
   height: 85vh;
-
   overflow-y: scroll;
   position: sticky;
   top: 0;
 }
 .right-bar {
   height: 85vh;
-
+  background-color: #e8eaed;
   position: sticky;
   top: 0;
 }
@@ -21,14 +23,19 @@ a {
   color: rgb(117, 117, 117);
 }
 .main-section {
-  margin-top: 2%;
+  margin-top: 1%;
 }
 .main-section h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: rgb(117, 117, 117);
 }
-button{
+.main-bar {
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+button {
   color: rgb(29, 21, 21);
   border: none;
   border-radius: 5px;
@@ -37,7 +44,56 @@ button{
   font-weight: bold;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background-color: rgb(29, 21, 21);
   color: white;
+}
+.navbar-customization {
+  background-color: #8562b9;
+}
+.accordion-button {
+  background-color: #e8eaed;
+  font-size: 14px;
+  font-weight: 500;
+}
+.accordion-item {
+  background-color: #fff;
+  border: none;
+}
+button:hover {
+  background-color: rgb(13, 110, 253);
+}
+.list-group-item {
+  background-color: #e8eaed;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.accordion-button::after {
+  width: 1rem;
+  height: 1rem;
+  background-size: auto;
+}
+.nav-link {
+  color: rgb(102, 100, 100);
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  font-weight: bold;
+  color: rgb(100, 98, 98);
+  background-color: #e8eaed;
+}
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgb(13, 110, 253);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 22px;
 }
