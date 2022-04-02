@@ -1,0 +1,68 @@
+[
+  {
+    "id": "one",
+    "title": "Getting Started",
+    "description": "This is a short description of the first section.",
+    "links": [
+      {
+        "id": 1,
+        "title": "Item 1",
+        "url": "#item-1"
+      },
+      {
+        "id": 2,
+        "title": "Item 2",
+        "url": "#item-2"
+      },
+      {
+        "id": 3,
+        "title": "Item 3",
+        "url": "#item-3"
+      }
+    ]
+  },
+  {
+    "id": "two",
+    "title": "Customize",
+    "description": "This is a short description of the first section , this is Customize section.",
+    "links": [
+      {
+        "id": 1,
+        "title": "Item 1",
+        "url": "#item-1"
+      },
+      {
+        "id": 2,
+        "title": "Item 2",
+        "url": "#item-2"
+      },
+      {
+        "id": 3,
+        "title": "Item 3",
+        "url": "#item-3"
+      }
+    ]
+  },
+  {
+    "id": "three",
+    "title": "Components",
+    "description": "This is a short description of the first section , this is Customize section.",
+    "links": [
+      {
+        "id": 1,
+        "title": "Item 1",
+        "url": "#item-1"
+      },
+      {
+        "id": 2,
+        "title": "Item 2",
+        "url": "#item-2"
+      },
+      {
+        "id": 3,
+        "title": "Item 3",
+        "url": "#item-3"
+      }
+    ]
+  }
+]
