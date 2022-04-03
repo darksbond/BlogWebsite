@@ -3,6 +3,8 @@
     "id": "one",
     "title": "Getting Started",
     "description": "This is a short description of the first section.",
+    "subheading": ["Submenu-1", "conten-1", "accesibilit-1"],
+    "location":"../pages/getting-started.html",
     "links": [
       {
         "id": 1,
@@ -25,6 +27,8 @@
     "id": "two",
     "title": "Customize",
     "description": "This is a short description of the first section , this is Customize section.",
+    "subheading": ["Submenu-2", "content-2", "accesibility-2"],
+    "location":"../pages/customize.html",
     "links": [
       {
         "id": 1,
@@ -47,6 +51,8 @@
     "id": "three",
     "title": "Components",
     "description": "This is a short description of the first section , this is Customize section.",
+    "subheading": ["submenu-3", "conten-3", "accesibility-3"],
+    "location":"./pages/components.html",
     "links": [
       {
         "id": 1,
