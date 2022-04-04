@@ -32,53 +32,22 @@ $(function () {
         .appendTo('.accordion');
       
       template.find(`.accordion-button`).data("itemdata", item);
-
-      (function ($) {
-        $(`.accordion-button`, template).click((e) => { 
-          
-        });
-
-      })(jQuery);
+ 
     });
   });
 
    
-  $(document).on("click", '.accordion-button', (e) => {
+  $(document).on("click", '.accordion-button', (e) => {    
     let data = $(e.target).data("itemdata");
-    $("#main-content").append(`
-    <div class="row">
-    <div class="col-md-9 main-bar px-5">
-      <div
-        data-bs-spy="scroll"
-        data-bs-target="#navbar-example3"
-        data-bs-offset="0"
-        tabindex="0"
-        class="main-bar-area"
-      >
-       
-      </div>
-    </div>
-    <!-- ! Right Bar Section ----- -->
-    <div class="col-3 d-none d-md-block">
-      <strong
-        style="border-bottom: 1px solid rgb(125, 124, 124)"
-        class="pb-1"
-        >On This Page</strong
-      >
-      <nav
-        id="navbar-example3"
-        class="navbar navbar-light flex-column align-items-stretch p-3"
-      >
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link" href="#item-1">${}</a>
-          <a class="nav-link" href="#item-2">${}</a>
-          <a class="nav-link" href="#item-3">${}</a>
-        </nav>
-      </nav>
-    </div>
-  </div>
-    `)
+    let innerContent = $(e.target).data("inner_content");
+
+    if (innerContent && innerContent.length) {
+      $(`#main-content`).html(innerContent);
+    } else {
+      $.get(data.location, htmlContent => {
+        $(e.target).data("inner_content", htmlContent);
+        $(`#main-content`).html(htmlContent);
+      }, "html");
+    }
   });
-
-
   })
