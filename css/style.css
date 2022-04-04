@@ -32,8 +32,7 @@ a {
 }
 .main-bar {
   background-color: #fff;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
 }
 button {
   color: rgb(29, 21, 21);

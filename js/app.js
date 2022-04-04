@@ -1,6 +1,20 @@
 $(function () {
+
+  function getLink() {
+    let ss = location.href;
+
+  let index = ss.indexOf("?")
+  let substring = ss.substring(index + 1);
+
+  let subIndex=substring.indexOf("#")
+  let page = substring.substring(0, subIndex);
+  let hashName=substring.substring(subIndex)
+  }
+ getLink()
+
+
   $.get("../lib/data.json", (data) => {
-     
+   
     data.forEach((item) => {
       let template = $(`<h2 class="accordion-header" id="heading${item.id}">
           <button
@@ -10,6 +24,7 @@ $(function () {
             data-bs-target="#collapse${item.id}"
             aria-expanded="true"
             aria-controls="collapse${item.id}"
+           
           >
             ${item.title}
           </button>
@@ -32,13 +47,24 @@ $(function () {
         .appendTo('.accordion');
       
       template.find(`.accordion-button`).data("itemdata", item);
+     
+      
+      if (page.length) {
+        var title = item.title.toLowerCase().replace(/ /g, "-");
+        if (page == title) {
+          template.find(`.accordion-button`).trigger("click")
+        }
+        
+      }
+
  
     });
   });
 
    
-  $(document).on("click", '.accordion-button', (e) => {    
+  $(document).on("click", '.accordion-button', (e) => {
     let data = $(e.target).data("itemdata");
+
     let innerContent = $(e.target).data("inner_content");
 
     if (innerContent && innerContent.length) {
@@ -50,4 +76,7 @@ $(function () {
       }, "html");
     }
   });
+
+
+
   })

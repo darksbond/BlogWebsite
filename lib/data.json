@@ -1,10 +1,11 @@
 [
   {
-    "uid":1,
+    "uid": 1,
     "id": "one",
+    "link": "getting-started.html",
     "title": "Getting Started",
     "subheading": ["Submenu-1", "conten-1", "accesibilit-1"],
-    "location":"pages/getting-started.html",
+    "location": "pages/getting-started.html",
     "links": [
       {
         "id": 1,
@@ -24,11 +25,12 @@
     ]
   },
   {
-    "uid":2,
+    "uid": 2,
     "id": "two",
+    "link": "customize.html",
     "title": "Customize",
     "subheading": ["Submenu-2", "content-2", "accesibility-2"],
-    "location":"pages/customize.html",
+    "location": "pages/customize.html",
     "links": [
       {
         "id": 1,
@@ -48,11 +50,12 @@
     ]
   },
   {
-    "uid":3,
+    "uid": 3,
     "id": "three",
+    "link": "components.html",
     "title": "Components",
     "subheading": ["submenu-3", "conten-3", "accesibility-3"],
-    "location":"pages/components.html",
+    "location": "pages/components.html",
     "links": [
       {
         "id": 1,
