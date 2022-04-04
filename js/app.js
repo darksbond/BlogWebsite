@@ -1,21 +1,32 @@
 $(function () {
 
-  function getLink() {
-    let ss = location.href;
 
-  let index = ss.indexOf("?")
+  let ss = location.href;
+  let index = ss.indexOf("?");
+  console.log("index", index);
+  let subIndex = -1;
+  let page = '';
+  let hashName = '';
   let substring = ss.substring(index + 1);
-
-  let subIndex=substring.indexOf("#")
-  let page = substring.substring(0, subIndex);
-  let hashName=substring.substring(subIndex)
+  if (index >= 0) {
+    console.log(`substring`, substring);
+    subIndex = substring.indexOf("#");
+    if (subIndex>=0) {
+      page = substring.substring(0, subIndex);
+      hashName += substring.substring(subIndex)
+    }
+    else {
+      page = substring;
+    }
   }
- getLink()
+  
+
+      
 
 
   $.get("../lib/data.json", (data) => {
    
-    data.forEach((item) => {
+    data.forEach((item,index) => {
       let template = $(`<h2 class="accordion-header" id="heading${item.id}">
           <button
             class="accordion-button"
@@ -51,11 +62,17 @@ $(function () {
       
       if (page.length) {
         var title = item.title.toLowerCase().replace(/ /g, "-");
+
         if (page == title) {
-          template.find(`.accordion-button`).trigger("click")
+          template.find(`.accordion-button`).trigger("click");
         }
-        
+        console.log(page);
+
+      } else if (index == 0) {
+        console.log(index);
+        template.find(`.accordion-button`).trigger("click");
       }
+
 
  
     });
