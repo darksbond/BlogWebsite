@@ -82,20 +82,20 @@ $(function () {
 //Using Conditions for not loading same location data
     if (innerContent && innerContent.length) {
       $(`#main-content`).html(innerContent);
-      getHref(innerContent,e.target);
+      getHref();
     }
     else {
       $.get(data.location, (htmlContent) => {
         
         $(e.target).data("inner_content", htmlContent);
         $(`#main-content`).html(htmlContent);
-        getHref(innerContent,e.target);
+        getHref();
       }, "html");
     }
 
   });
 
-  function getHref(innerContent,target) {
+  function getHref() {
     let hrefsTag = $("#main-content a[href^='#']").filter((b, a) => $(a).attr("href").length > 1);
     
     hrefsTag.each((index,element) => {
