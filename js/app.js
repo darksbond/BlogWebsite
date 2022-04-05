@@ -8,7 +8,7 @@ $(function () {
   let hashName = '';
   let substring = ss.substring(index + 1);
   if (index >= 0) {
-    //console.log(`substring`, substring);
+   
     subIndex = substring.indexOf("#");
     if (subIndex>=0) {
       page = substring.substring(0, subIndex);
@@ -20,7 +20,7 @@ $(function () {
   }
   
 
-  $.get("../lib/data.json", (data) => {
+  $.get("lib/data.json", (data) => {
    
     data.forEach((item,index) => {
       let template = $(`<h2 class="accordion-header" id="heading${item.id}">
