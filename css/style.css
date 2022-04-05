@@ -16,7 +16,7 @@ body {
   height: 85vh;
   background-color: #e8eaed;
   position: sticky;
-  top: 0;
+  top: 80px;
 }
 a {
   text-decoration: none;

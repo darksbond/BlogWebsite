@@ -1,15 +1,14 @@
 $(function () {
 
-
   let ss = location.href;
+ 
   let index = ss.indexOf("?");
-  console.log("index", index);
   let subIndex = -1;
   let page = '';
   let hashName = '';
   let substring = ss.substring(index + 1);
   if (index >= 0) {
-    console.log(`substring`, substring);
+    //console.log(`substring`, substring);
     subIndex = substring.indexOf("#");
     if (subIndex>=0) {
       page = substring.substring(0, subIndex);
@@ -20,9 +19,6 @@ $(function () {
     }
   }
   
-
-      
-
 
   $.get("../lib/data.json", (data) => {
    
@@ -57,23 +53,22 @@ $(function () {
         </div>`)
         .appendTo('.accordion');
       
+      //item is stored in .accordion-button element
       template.find(`.accordion-button`).data("itemdata", item);
+
      
-      
       if (page.length) {
         var title = item.title.toLowerCase().replace(/ /g, "-");
 
         if (page == title) {
           template.find(`.accordion-button`).trigger("click");
         }
-        console.log(page);
+        //console.log(page);
 
       } else if (index == 0) {
-        console.log(index);
+       // console.log(index);
         template.find(`.accordion-button`).trigger("click");
       }
-
-
  
     });
   });
@@ -81,19 +76,40 @@ $(function () {
    
   $(document).on("click", '.accordion-button', (e) => {
     let data = $(e.target).data("itemdata");
-
+    
     let innerContent = $(e.target).data("inner_content");
-
+    getHref(innerContent);
+//Using Conditions for not loading same location data
     if (innerContent && innerContent.length) {
       $(`#main-content`).html(innerContent);
-    } else {
-      $.get(data.location, htmlContent => {
+      getHref(innerContent,e.target);
+    }
+    else {
+      $.get(data.location, (htmlContent) => {
+        
         $(e.target).data("inner_content", htmlContent);
         $(`#main-content`).html(htmlContent);
+        getHref(innerContent,e.target);
       }, "html");
     }
+
   });
 
+  function getHref(innerContent,target) {
+    let hrefsTag = $("#main-content a[href^='#']").filter((b, a) => $(a).attr("href").length > 1);
+
+    // let savedData = $(innerContent).find('.on-this-page').data('hrefData', innerContent)
+  //  let x= hrefsTag.filter(elem => {
+  //     let attr = elem.getAttribute('href');
+  //     return attr.length >=10
+  //   })
+    
+    hrefsTag.each((elem,b) => {
+     $('.right-bar-content').append(b)
+    })
+    
+
+}
 
 
-  })
+})
