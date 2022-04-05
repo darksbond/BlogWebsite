@@ -97,15 +97,9 @@ $(function () {
 
   function getHref(innerContent,target) {
     let hrefsTag = $("#main-content a[href^='#']").filter((b, a) => $(a).attr("href").length > 1);
-
-    // let savedData = $(innerContent).find('.on-this-page').data('hrefData', innerContent)
-  //  let x= hrefsTag.filter(elem => {
-  //     let attr = elem.getAttribute('href');
-  //     return attr.length >=10
-  //   })
     
-    hrefsTag.each((elem,b) => {
-     $('.right-bar-content').append(b)
+    hrefsTag.each((index,element) => {
+      $('.right-bar-content').append(element);
     })
     
 

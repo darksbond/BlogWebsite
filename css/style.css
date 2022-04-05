@@ -10,7 +10,7 @@ body {
   height: 85vh;
   overflow-y: scroll;
   position: sticky;
-  top: 0;
+  top: 80px;
 }
 .right-bar {
   height: 85vh;
