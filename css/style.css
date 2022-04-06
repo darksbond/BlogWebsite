@@ -25,11 +25,7 @@ a {
 .main-section {
   margin-top: 1%;
 }
-.main-section h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: rgb(117, 117, 117);
-}
+
 .main-bar {
   background-color: #fff;
   height: auto;
@@ -95,4 +91,8 @@ button:hover {
 
 .my-float {
   margin-top: 22px;
+}
+
+.active {
+  font-weight: bold;
 }
