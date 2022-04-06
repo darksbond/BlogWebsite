@@ -10,7 +10,7 @@ $(function () {
   if (index >= 0) {
    
     subIndex = substring.indexOf("#");
-    if (subIndex>=0) {
+    if (subIndex >= 0) {
       page = substring.substring(0, subIndex);
       hashName += substring.substring(subIndex)
     }
@@ -22,7 +22,7 @@ $(function () {
 
   $.get("lib/data.json", (data) => {
    
-    data.forEach((item,index) => {
+    data.forEach((item, index) => {
       let template = $(`<h2 class="accordion-header" id="heading${item.id}">
           <button
             class="accordion-button"
@@ -66,7 +66,7 @@ $(function () {
         //console.log(page);
 
       } else if (index == 0) {
-       // console.log(index);
+        // console.log(index);
         template.find(`.accordion-button`).trigger("click");
       }
  
@@ -78,8 +78,8 @@ $(function () {
     let data = $(e.target).data("itemdata");
     
     let innerContent = $(e.target).data("inner_content");
-    getHref(innerContent);
-//Using Conditions for not loading same location data
+    // getHref();
+    //Using Conditions for not loading same location data
     if (innerContent && innerContent.length) {
       $(`#main-content`).html(innerContent);
       getHref();
@@ -89,6 +89,7 @@ $(function () {
         
         $(e.target).data("inner_content", htmlContent);
         $(`#main-content`).html(htmlContent);
+        setTimeout(() => 5, 5000);
         getHref();
       }, "html");
     }
@@ -98,12 +99,54 @@ $(function () {
   function getHref() {
     let hrefsTag = $("#main-content a[href^='#']").filter((b, a) => $(a).attr("href").length > 1);
     
-    hrefsTag.each((index,element) => {
-      $('.right-bar-content').append(element);
+    hrefsTag.each((index, element) => {
+      console.log($('#right-bar-content'), $(element).clone());
+      $('#right-bar-content').append($(element).clone());
     })
     
 
-}
+  }
 
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
 
-})
+    var viewportTop = $(window).scrollTop() - 100;
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+  
+  
+  $(document).on('scroll', function () {
+    let hrefsTag = $(document).find(".main-bar-area a[href^='#']").filter((b, a) => $(a).attr("href").length > 1 && $(a).isInViewport());
+    $(document).find(`#right-bar-content [href^="#"].active`).removeClass("active");
+    
+    if (hrefsTag.length) {
+      $(document).find(`#right-bar-content [href="${$(hrefsTag[0]).attr("href")}"]`).addClass("active");
+    }
+    /* $('.main-bar h3').each(function () {
+      console.log($('#right-bar-content a[href=#'+ '' +']'));
+        if($(window).scrollTop() >= $(this).position().top) {
+          var id = $(this).attr('id');
+         
+            $('#right-bar-content a').removeClass('active');
+            $('#right-bar-content a[href=#'+ id +']').addClass('active');
+          
+        }
+    }); */
+  });
+  //scroll Event
+/*   $(window).on('scroll', function () {
+    $('.main-bar h3').each(function () {
+      if ($(window).scrollTop() >= $(this).position().top) {
+       
+          let id = $(this).attr('id');
+          $(".right-bar-content a").removeClass('.active');
+          $('.right-bar-content a[href=#' + id + ']').addClass('.active');
+        
+      }
+    })
+  })
+*/
+}); 
