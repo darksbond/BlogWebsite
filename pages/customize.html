@@ -1,4 +1,3 @@
-<div class="row">
   <div class="col-md-9 main-bar px-5">
     <div
       data-bs-spy="scroll"
@@ -102,13 +101,13 @@
             <pre
               class="chroma"
             ><code class="language-text" data-lang="text">your-project/
-├── scss
-│   └── custom.scss
-└── node_modules/
-    └── bootstrap
-        ├── js
-        └── scss
-</code></pre>
+  ├── scss
+  │   └── custom.scss
+  └── node_modules/
+      └── bootstrap
+          ├── js
+          └── scss
+  </code></pre>
           </div>
           <p>
             If you’ve downloaded our source files and aren’t using a package
@@ -129,12 +128,12 @@
             <pre
               class="chroma"
             ><code class="language-text" data-lang="text">your-project/
-├── scss
-│   └── custom.scss
-└── bootstrap/
-    ├── js
-    └── scss
-</code></pre>
+  ├── scss
+  │   └── custom.scss
+  └── bootstrap/
+      ├── js
+      └── scss
+  </code></pre>
           </div>
           <h2 id="importing">
             Importing<a
@@ -166,14 +165,14 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-</span><span class="c1">// Option A: Include all of Bootstrap
-</span><span class="c1"></span>
-<span class="c1">// Include any default variable overrides here (though functions won't be available)
-</span><span class="c1"></span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span>
-
-<span class="c1">// Then add additional custom code here
-</span></code></pre>
+  </span><span class="c1">// Option A: Include all of Bootstrap
+  </span><span class="c1"></span>
+  <span class="c1">// Include any default variable overrides here (though functions won't be available)
+  </span><span class="c1"></span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span>
+  
+  <span class="c1">// Then add additional custom code here
+  </span></code></pre>
           </div>
           <div class="bd-clipboard">
             <button
@@ -189,27 +188,27 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-</span><span class="c1">// Option B: Include parts of Bootstrap
-</span><span class="c1"></span>
-<span class="c1">// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
-
-<span class="c1">// 2. Include any default variable overrides here
-</span><span class="c1"></span>
-<span class="c1">// 3. Include remainder of required Bootstrap stylesheets
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
-
-<span class="c1">// 4. Include any optional Bootstrap components as you like
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/images"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/containers"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/grid"</span><span class="p">;</span>
-
-<span class="c1">// 5. Add additional custom code here
-</span></code></pre>
+  </span><span class="c1">// Option B: Include parts of Bootstrap
+  </span><span class="c1"></span>
+  <span class="c1">// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+  
+  <span class="c1">// 2. Include any default variable overrides here
+  </span><span class="c1"></span>
+  <span class="c1">// 3. Include remainder of required Bootstrap stylesheets
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+  
+  <span class="c1">// 4. Include any optional Bootstrap components as you like
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/images"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/containers"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/grid"</span><span class="p">;</span>
+  
+  <span class="c1">// 5. Add additional custom code here
+  </span></code></pre>
           </div>
           <p>
             With that setup in place, you can begin to modify any of the Sass
@@ -266,22 +265,22 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Required
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
-
-<span class="c1">// Default variable overrides
-</span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
-<span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#111</span><span class="p">;</span>
-
-<span class="c1">// Required
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
-
-<span class="c1">// Optional Bootstrap components here
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
-<span class="c1">// etc
-</span></code></pre>
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+  
+  <span class="c1">// Default variable overrides
+  </span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+  <span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#111</span><span class="p">;</span>
+  
+  <span class="c1">// Required
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+  
+  <span class="c1">// Optional Bootstrap components here
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+  <span class="c1">// etc
+  </span></code></pre>
           </div>
           <p>
             Repeat as necessary for any variable in Bootstrap, including the
@@ -352,8 +351,8 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nv">$primary</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="p">;</span>
-<span class="nv">$danger</span><span class="o">:</span> <span class="mh">#ff4136</span><span class="p">;</span>
-</code></pre>
+  <span class="nv">$danger</span><span class="o">:</span> <span class="mh">#ff4136</span><span class="p">;</span>
+  </code></pre>
           </div>
           <p>
             Later on, these variables are set in Bootstrap’s
@@ -373,10 +372,10 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">"primary"</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">,</span>
-  <span class="s2">"danger"</span><span class="o">:</span> <span class="nv">$danger</span>
-<span class="p">);</span>
-</code></pre>
+    <span class="s2">"primary"</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">,</span>
+    <span class="s2">"danger"</span><span class="o">:</span> <span class="nv">$danger</span>
+  <span class="p">);</span>
+  </code></pre>
           </div>
           <h3 id="add-to-map">
             Add to map<a
@@ -408,13 +407,13 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Create your own map
-</span><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
-<span class="p">);</span>
-
-<span class="c1">// Merge the maps
-</span><span class="c1"></span><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$custom-colors</span><span class="p">);</span>
-</code></pre>
+  </span><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
+    <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
+  <span class="p">);</span>
+  
+  <span class="c1">// Merge the maps
+  </span><span class="c1"></span><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$custom-colors</span><span class="p">);</span>
+  </code></pre>
           </div>
           <h3 id="remove-from-map">
             Remove from map<a
@@ -444,18 +443,18 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Required
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
-
-<span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
-
-<span class="c1">// Optional
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
-<span class="c1">// etc
-</span></code></pre>
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+  
+  <span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
+  
+  <span class="c1">// Optional
+  </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/root"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+  <span class="c1">// etc
+  </span></code></pre>
           </div>
           <h2 id="required-keys">
             Required keys<a
@@ -518,10 +517,10 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="p">;</span>
-  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
           <p>
             You can lighten or darken colors with Bootstrap’s
@@ -545,20 +544,20 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="c1">// Tint a color: mix a color with white
-</span><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="ni">white</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// Shade a color: mix a color with black
-</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// Shade the color if the weight is positive, else tint it
-</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shift-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="nv">$weight</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre>
+  </span><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="ni">white</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Shade a color: mix a color with black
+  </span><span class="c1"></span><span class="k">@function</span><span class="nf"> shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Shade the color if the weight is positive, else tint it
+  </span><span class="c1"></span><span class="k">@function</span><span class="nf"> shift-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="nv">$weight</span><span class="p">));</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
           <p>
             In practice, you’d call the function and pass in the color and
@@ -578,13 +577,13 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.custom-element-2</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nc">.custom-element-2</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
           <h3 id="color-contrast">
             Color contrast<a
@@ -640,11 +639,11 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+    <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+      <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
+  </code></pre>
           </div>
           <p>It can also be used for one-off contrast needs:</p>
           <div class="bd-clipboard">
@@ -661,9 +660,9 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
+  </span><span class="c1"></span><span class="p">}</span>
+  </code></pre>
           </div>
           <p>You can also specify a base color with our color map functions:</p>
           <div class="bd-clipboard">
@@ -680,9 +679,9 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$dark</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$dark</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
+  </span><span class="c1"></span><span class="p">}</span>
+  </code></pre>
           </div>
           <h3 id="escape-svg">
             Escape SVG<a
@@ -731,18 +730,18 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output calc(.25rem - 1px) is valid
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output the same calc(.25rem - 1px) as above
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre>
+  <span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+  
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="c1">// Output calc(.25rem - 1px) is valid
+  </span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="c1">// Output the same calc(.25rem - 1px) as above
+  </span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
           <p>Example where the calc is invalid:</p>
           <div class="bd-clipboard">
@@ -759,18 +758,18 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output calc(.25rem - 0) is invalid
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output .25rem
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre>
+  <span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="c1">// Output calc(.25rem - 0) is invalid
+  </span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="c1">// Output .25rem
+  </span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
           <h2 id="mixins">
             Mixins<a
@@ -814,11 +813,11 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> color-scheme</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@content</span><span class="p">;</span>
+    <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">@content</span><span class="p">;</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
+  </code></pre>
           </div>
           <div class="bd-clipboard">
             <button
@@ -834,15 +833,15 @@
             <pre
               class="chroma"
             ><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Insert dark mode styles here
-</span><span class="c1"></span>  <span class="p">}</span>
-
-  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="n">custom-named-scheme</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Insert custom color scheme styles here
-</span><span class="c1"></span>  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
+    <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Insert dark mode styles here
+  </span><span class="c1"></span>  <span class="p">}</span>
+  
+    <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="n">custom-named-scheme</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Insert custom color scheme styles here
+  </span><span class="c1"></span>  <span class="p">}</span>
+  <span class="p">}</span>
+  </code></pre>
           </div>
         </div>
       </main>
@@ -862,4 +861,4 @@
       <nav class="nav nav-pills flex-column right-bar-content"></nav>
     </nav>
   </div>
-</div>
+
