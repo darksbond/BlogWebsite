@@ -1,5 +1,4 @@
 //? ----------- 1st step -fetching data
-
 $.get("lib/data.json",
         function (data) {
             data.forEach(function (element, index) {
@@ -33,26 +32,36 @@ $.get("lib/data.json",
          </div>`).appendTo('.left-menu-bar');
                
            template.find('.accordion-button').data('jsonData',element);
-            
             }
             )
         }
 );
-    
 //? ------------- 2nd step -adding events
 $(document).on('click', '.accordion-button', function (event) {
     let data = $(event.target).data('jsonData');
     let innerContent=$(event.target).data('innerContent')
 
     if (innerContent && innerContent.length) {
-        $('#main-content').html(innerContent);
+      $('#main-content').html(innerContent);
+      getHref()
     }
     else {
         $.get(data.location, (htmlContent) => {
             $('#main-content').html(htmlContent);
-            $(event.target).data('innerContent', htmlContent);
+          $(event.target).data('innerContent', htmlContent);
+          getHref()
         })    
-    }
-
+  }
+  
 })
 
+function getHref() {
+  let x = $('#main-content a[href^="#"]').filter((i,element) => {
+    $(element).attr('href').length >1
+  });
+  let links = x.prevObject;
+  links.each((index, element) => {
+    $('#right-bar-content').append(element);
+  })
+ 
+}

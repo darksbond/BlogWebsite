@@ -1,7 +1,7 @@
 $(function () {
  //!------ getting location href and linking to the pages
   //? ---- 3rd step 
- /*  let ss = location.href;
+  let ss = location.href;
  
   let index = ss.indexOf("?");
   let subIndex = -1;
@@ -18,7 +18,7 @@ $(function () {
     else {
       page = substring;
     }
-  } */
+  }
   
   
   
@@ -61,7 +61,7 @@ $(function () {
       //? ------  item is stored in .accordion-button element
       template.find(`.accordion-button`).data("itemdata", item);
 
-     /*  if (page.length) {
+      if (page.length) {
         var title = item.title.toLowerCase().replace(/ /g, "-");
         if (page == title) {
           template.find(`.accordion-button`).trigger("click");
@@ -70,7 +70,7 @@ $(function () {
 
       else if (index == 0) {
         template.find(`.accordion-button`).trigger("click");
-      } */
+      }
 
     });
   });
