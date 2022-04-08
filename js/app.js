@@ -104,7 +104,7 @@ $(function () {
     let hrefsTag = $("#main-content a[href^='#']").filter((index, element) => $(element).attr("href").length > 1);
     
     hrefsTag.clone().each((index,element) => {
-      $('.right-bar-content').append(element);
+      $('#right-bar-content').append(element);
     })  
 }
 })
