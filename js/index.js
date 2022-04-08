@@ -1,4 +1,23 @@
 //? ----------- 1st step -fetching data
+let ss = location.href;
+
+let index = ss.indexOf("?");
+let subIndex = -1;
+let page = '';
+let hashName = '';
+let substring = ss.substring(index + 1);
+if (index >= 0) {
+  subIndex = substring.indexOf("#");
+  if (subIndex>=0) {
+    page = substring.substring(0, subIndex);
+    hashName += substring.substring(subIndex)
+  }
+  else {
+    page = substring;
+  }
+}
+
+
 $.get("lib/data.json",
         function (data) {
             data.forEach(function (element, index) {
@@ -31,7 +50,19 @@ $.get("lib/data.json",
            </div>
          </div>`).appendTo('.left-menu-bar');
                
-           template.find('.accordion-button').data('jsonData',element);
+              template.find('.accordion-button').data('jsonData', element);
+
+
+              if (page.length) {
+                var title = item.title.toLowerCase().replace(/ /g, "-");
+                if (page == title) {
+                  template.find(`.accordion-button`).trigger("click");
+                }
+              }
+        
+              else if (index == 0) {
+                template.find(`.accordion-button`).trigger("click");
+              }
             }
             )
         }
@@ -45,23 +76,22 @@ $(document).on('click', '.accordion-button', function (event) {
       $('#main-content').html(innerContent);
       getHref()
     }
-    else {
-        $.get(data.location, (htmlContent) => {
-            $('#main-content').html(htmlContent);
-          $(event.target).data('innerContent', htmlContent);
-          getHref()
-        })    
-  }
+   else {
+      $.get(data.location, (htmlContent) => {
+        $(event.target).data("inner_content", htmlContent);
+        $(`#main-content`).html(htmlContent);
+        getHref();
+
+      },"html");
+    }
   
 })
 
 function getHref() {
-  let x = $('#main-content a[href^="#"]').filter((i,element) => {
-    $(element).attr('href').length >1
-  });
-  let links = x.prevObject;
-  links.each((index, element) => {
+  let links = $('#main-content a[href^="#"]').filter((i,element) => $(element).attr("href").length > 1);
+
+  
+  links.clone().each((index, element) => {
     $('#right-bar-content').append(element);
   })
- 
 }

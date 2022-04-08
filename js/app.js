@@ -19,9 +19,6 @@ $(function () {
       page = substring;
     }
   }
-  
-  
-  
   //! -------   Getting json data and load it to main page
   //? ---------- 1st step
   
@@ -110,6 +107,4 @@ $(function () {
       $('.right-bar-content').append(element);
     })  
 }
-
-  
 })
