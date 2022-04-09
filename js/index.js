@@ -140,7 +140,7 @@ $(function () {
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body">
-            <ul>
+            <ul class="list-unstyled">
               <li><a href="#" class='click-btn'>${item.subheading[0]}</a></li>
               <li><a href="#" class='click-btn'>${item.subheading[1]}</a></li>
               <li><a href="#" class='click-btn'>${item.subheading[2]}</a></li>
