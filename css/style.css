@@ -74,12 +74,12 @@ button:hover {
 .nav-link {
   color: rgb(102, 100, 100);
 }
-.nav-pills .nav-link.active,
+/* .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   font-weight: bold;
   color: rgb(100, 98, 98);
   background-color: #e8eaed;
-}
+} */
 .float {
   position: fixed;
   width: 60px;
@@ -95,4 +95,7 @@ button:hover {
 
 .my-float {
   margin-top: 22px;
+}
+.active {
+  font-weight: bold;
 }

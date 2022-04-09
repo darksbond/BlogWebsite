@@ -9,7 +9,6 @@ $(function () {
   let hashName = '';
   let substring = ss.substring(index + 1);
   if (index >= 0) {
-   
     subIndex = substring.indexOf("#");
     if (subIndex>=0) {
       page = substring.substring(0, subIndex);
@@ -21,7 +20,6 @@ $(function () {
   }
   //! -------   Getting json data and load it to main page
   //? ---------- 1st step
-  
   
   $.get("lib/data.json", (data) => {
     data.forEach((item,index) => {
@@ -57,18 +55,15 @@ $(function () {
       
       //? ------  item is stored in .accordion-button element
       template.find(`.accordion-button`).data("itemdata", item);
-
       if (page.length) {
         var title = item.title.toLowerCase().replace(/ /g, "-");
         if (page == title) {
           template.find(`.accordion-button`).trigger("click");
         }
       }
-
       else if (index == 0) {
         template.find(`.accordion-button`).trigger("click");
       }
-
     });
   });
 
@@ -83,7 +78,6 @@ $(function () {
     //this condition is used for not fetching the same location
 
     if (innerContent && innerContent.length) {
-     
       $(`#main-content`).html(innerContent);
       getHref();
     }
@@ -95,7 +89,6 @@ $(function () {
 
       },"html");
     }
-
   });
 
 //! -------------   getHref Function
