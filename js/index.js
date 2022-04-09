@@ -169,7 +169,6 @@ $(function () {
  
     });
   },"json");
-
    
   $(document).on("click", '.click-btn', (e) => {
     let data = $(e.target).data("itemdata");
@@ -185,11 +184,9 @@ $(function () {
         
         $(e.target).data("inner_content", htmlContent);
         $(`#main-content`).html(htmlContent);
-        setTimeout(() => 5, 5000);
         getHref();
       }, "html");
     }
-
   });
 
   function getHref() {
