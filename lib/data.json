@@ -3,7 +3,7 @@
     "uid": 1,
     "id": "one",
     "title": "Getting Started",
-    "subheading": ["Submenu-1", "content-1", "accesibilit-1"],
+    "subheading": ["Our Services", "About Us", "Get Notified"],
     "location": "pages/getting-started.html",
     "links": [
       {
@@ -27,7 +27,7 @@
     "uid": 2,
     "id": "two",
     "title": "Customize",
-    "subheading": ["Submenu-2", "content-2", "accesibility-2"],
+    "subheading": ["Submenu", "Content", "Accesibility"],
     "location": "pages/customize.html",
     "links": [
       {
@@ -52,7 +52,7 @@
     "id": "three",
 
     "title": "Components",
-    "subheading": ["submenu-3", "conten-3", "accesibility-3"],
+    "subheading": ["Contributing", "Connections", "Multimedia"],
     "location": "pages/components.html",
     "links": [
       {
